@@ -1,0 +1,26 @@
+{
+  "name": "linear-linux",
+  "version": "0.2.0",
+  "description": "Linux support for linear.app",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx electron index.js",
+    "build": "electron-packager . linear"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kleo-dev/linear-linux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kleo-dev/linear-linux/issues"
+  },
+  "homepage": "https://github.com/kleo-dev/linear-linux#readme",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  }
+}
