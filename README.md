@@ -11,14 +11,9 @@
 A linux port of <a href="https://linear.app/">linear.app</a>
 </h1>
 
-# Install (Curl)
+# installer
 ```bash
-curl -s https://raw.githubusercontent.com/kleo-dev/linear-linux/refs/heads/master/installer.sh | bash
-```
-
-# Install (Wget)
-```bash
-wget -qO- https://raw.githubusercontent.com/kleo-dev/linear-linux/refs/heads/master/installer-wget.sh | bash
+wget -qO- https://raw.githubusercontent.com/kleo-dev/linear-linux/refs/heads/master/installer.sh | bash
 ```
 
 # Having an issue?
