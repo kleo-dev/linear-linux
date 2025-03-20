@@ -1,5 +1,4 @@
-const { app, BrowserWindow, session } = require('electron');
-const fs = require('fs');
+const { app, BrowserWindow } = require('electron');
 
 let mainWindow;
 
@@ -12,6 +11,9 @@ app.whenReady().then(() => {
             contextIsolation: true,
         },
     });
+
+    mainWindow.setMenu(null);
+
     mainWindow.loadURL('https://linear.app/login');
 
     app.on('window-all-closed', () => {
