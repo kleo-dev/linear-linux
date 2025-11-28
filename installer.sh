@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-VERSION="${VERSION:-0.2.1}"
+VERSION="${VERSION:-0.2.3}"
 APPIMAGE_URL="${APPIMAGE_URL:-https://github.com/kleo-dev/linear-linux/releases/download/v${VERSION}/linear-linux-${VERSION}.AppImage}"
 INSTALL_ROOT="${INSTALL_ROOT:-/opt}"
 INSTALL_DIR="${INSTALL_ROOT}/linear-linux-${VERSION}"
