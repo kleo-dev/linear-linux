@@ -1,23 +1,47 @@
 {
   "name": "linear-linux",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "Linux support for linear.app",
   "main": "index.js",
   "scripts": {
-    "start": "npx electron index.js",
-    "build": "electron-builder --linux AppImage"
+    "start": "CHROME_DEVEL_SANDBOX=${CHROME_DEVEL_SANDBOX:-/opt/linear-linux-0.2.1/squashfs-root/chrome-sandbox} ELECTRON_DISABLE_SANDBOX=1 npx electron index.js",
+    "build": "electron-builder --linux AppImage deb"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kleo-dev/linear-linux.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Linear Linux <linear@example.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kleo-dev/linear-linux/issues"
   },
   "homepage": "https://github.com/kleo-dev/linear-linux#readme",
+  "build": {
+    "appId": "app.linear.linux",
+    "productName": "Linear",
+    "files": [
+      "index.js",
+      "package.json",
+      "assets/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "assets/linear-app-icon.png",
+      "afterInstall": "build/after-install.sh"
+    },
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "assets"
+      }
+    ]
+  },
   "devDependencies": {
     "electron": "^33.2.1",
     "electron-builder": "^25.1.8"
